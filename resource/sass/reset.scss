@@ -1,0 +1,70 @@
+html{
+	margin:0;
+	padding:0
+}
+body{
+	@extend html;
+	font-size:12px;
+	color:#999;
+	font-family:"Microsoft Yahei";
+	line-height:22px;
+}
+h1,h2,h3,h4,h5,h6,{
+	@extend html;
+	font-size:14px;
+
+}
+input,button,textarea,select{
+	@extend html;
+	border:none;
+	outline:none;
+}
+ul,ol,dl,li,dt,dd{
+	@extend html;
+	list-style-type:none;
+}
+a{
+	text-decoration:none;
+	color:#666;
+}
+a:hover{
+	text-decoration:none;
+}
+b,i,cite,em,small,big{
+	font-style:none;
+	font-weight: none;
+}
+img{
+	display:block;
+}
+.l{
+	float:left;
+}
+.r{
+	float: right;
+}
+.hid{
+	overflow:hidden;
+}
+.hidden{
+	display: none;
+}
+@mixin clearfloat{
+	clear:both;
+	display: block;
+	width:0;
+	height:0;
+	line-height:0;
+	font-size:0;
+	visibility: hidden;
+}
+.clear{
+	@include clearfloat;
+}
+.clearfix:after{
+	content:"";
+	@include clearfloat;
+}
+.center{
+	margin:0 auto;
+}
